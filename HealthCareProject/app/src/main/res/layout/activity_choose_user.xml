@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5E2EF"
+    android:padding="24dp">
+    <!-- implemented by Rema -->
+    <ImageView
+        android:id="@+id/logoTop"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/logo2"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue as"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2F6F88"
+        app:layout_constraintTop_toBottomOf="@id/logoTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnClient"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:text="Client"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2F8FB4"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/btnCaregiver"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:text="Caregiver"
+        android:textAllCaps="false"
+        android:textColor="#2F6F88"
+        android:backgroundTint="#EAF5FB"
+        app:layout_constraintTop_toBottomOf="@id/btnClient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="14dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
