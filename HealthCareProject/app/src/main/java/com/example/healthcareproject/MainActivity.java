@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.healthcareproject.ChooseUserActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // implemented by Manal
-                Intent intent = new Intent(MainActivity.this, ChooseUserActivity.class);
-                startActivity(intent);
             }
         });
     }

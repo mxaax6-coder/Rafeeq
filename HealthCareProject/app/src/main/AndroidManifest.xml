@@ -25,9 +25,6 @@
             android:name=".MainActivity"
             android:exported="true" />
 
-        <activity
-            android:name=".ChooseUserActivity"
-            android:exported="false" />
     </application>
 
 </manifest>
