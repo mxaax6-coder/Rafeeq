@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Background -->
+    <color name="light_blue_bg">#EEF4F8</color>
+
+    <!-- Input -->
+    <color name="input_bg">#FFFFFF</color>
+    <color name="input_border">#D9D9D9</color>
+
+    <!-- Text -->
+    <color name="dark_text">#333333</color>
+
+    <!-- Button -->
+    <color name="teal_button">#5BA6B6</color>
+    <color name="white">#FFFFFF</color>
+
 </resources>
