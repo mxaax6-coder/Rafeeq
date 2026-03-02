@@ -5,13 +5,16 @@ import android.text.InputType;
 import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     EditText etEmailLogin, etPasswordLogin;
     Button btnLogin;
+    TextView tvGoRegister;
 
     boolean passwordVisible = false;
 
@@ -23,6 +26,12 @@ class LoginActivity extends AppCompatActivity {
         etEmailLogin = findViewById(R.id.etEmailLogin);
         etPasswordLogin = findViewById(R.id.etPasswordLogin);
         btnLogin = findViewById(R.id.btnLogin);
+        tvGoRegister = findViewById(R.id.tvGoRegister);
+
+        tvGoRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
 
         // Show / Hide password
         etPasswordLogin.setOnTouchListener((v, event) -> {

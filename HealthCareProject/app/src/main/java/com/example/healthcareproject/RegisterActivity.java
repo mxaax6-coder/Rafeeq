@@ -1,5 +1,6 @@
 package com.example.healthcareproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.MotionEvent;
@@ -32,9 +33,10 @@ public class RegisterActivity extends AppCompatActivity {
         btnSignUp = findViewById(R.id.btnSignUp);
         btnBack = findViewById(R.id.btnBack);
 
+
         btnBack.setOnClickListener(v -> finish());
 
-        // Show / Hide password
+
         etPassword.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_UP) {
                 if (event.getRawX() >= (etPassword.getRight() -
@@ -53,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
             return false;
         });
+
 
         btnSignUp.setOnClickListener(v -> {
 
@@ -74,6 +77,10 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(this,
                     "Registered as " + accountType,
                     Toast.LENGTH_SHORT).show();
+
+
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            finish();
         });
     }
 }
