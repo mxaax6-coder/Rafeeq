@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-
+// implemented All by Manal
 public class CaregiverHomeActivity extends AppCompatActivity {
 
     Button btnAppointments, btnAvailability, btnReport, btnProfile;
