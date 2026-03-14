@@ -34,7 +34,11 @@ public class RegisterActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
 
 
-        btnBack.setOnClickListener(v -> finish());
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        });
 
 
         etPassword.setOnTouchListener((v, event) -> {
@@ -56,7 +60,6 @@ public class RegisterActivity extends AppCompatActivity {
             return false;
         });
 
-
         btnSignUp.setOnClickListener(v -> {
 
             String name = etName.getText().toString();
@@ -66,6 +69,11 @@ public class RegisterActivity extends AppCompatActivity {
 
             int selectedId = radioGroup.getCheckedRadioButtonId();
 
+            if (name.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             if (selectedId == -1) {
                 Toast.makeText(this, "Select account type", Toast.LENGTH_SHORT).show();
                 return;
@@ -74,12 +82,11 @@ public class RegisterActivity extends AppCompatActivity {
             RadioButton selected = findViewById(selectedId);
             String accountType = selected.getText().toString();
 
-            Toast.makeText(this,
-                    "Registered as " + accountType,
-                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Registered as " + accountType, Toast.LENGTH_SHORT).show();
 
 
-            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(intent);
             finish();
         });
     }
