@@ -58,16 +58,15 @@
             android:paddingEnd="40dp"
             android:paddingStart="10dp" />
 
-        <Button
-            android:id="@+id/btnPayNow"
+        <android.widget.Button
+            android:id="@+id/btnPayNowPayment"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:backgroundTint="#3B8686"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Pay Now"
-            android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textAllCaps="false"
+            android:background="@drawable/black_button_background" />
 
     </LinearLayout>
 
